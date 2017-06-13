@@ -8,7 +8,7 @@ defmodule Blankable.Mixfile do
      build_embedded: Mix.env == :prod,
      start_permanent: Mix.env == :prod,
      deps: deps(),
-     package: package]
+     package: package()]
   end
 
   # Configuration for the OTP application
@@ -29,7 +29,7 @@ defmodule Blankable.Mixfile do
   #
   # Type "mix help deps" for more examples and options
   defp deps do
-    []
+    [{:ex_doc, ">= 0.0.0", only: :dev}]
   end
 
   defp package do
@@ -37,7 +37,8 @@ defmodule Blankable.Mixfile do
       files: ["lib", "mix.exs", "README.md", "LICENSE"],
       maintainers: ["Sam Davies"],
       licenses: ["MIT"],
-      links: %{"GitHub" => "https://github.com/sampdavies/blankable"}
+      links: %{"GitHub" => "https://github.com/sampdavies/blankable"},
+      description: "Implementation of `blank?` in Elixir. Aims to work in a practically identical fashion to ActiveSupport's #blank? method."
     ]
   end
 end
