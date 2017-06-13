@@ -40,6 +40,7 @@ end
 defimpl Blankable, for: BitString do
   @blank_regex ~r/\A[[:space:]]*\z/u
 
+  @doc "Optimise this common use case"
   def blank?(""), do: true
   def blank?(string) do
     Regex.match?(@blank_regex, string)
