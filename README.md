@@ -24,3 +24,11 @@ true
 iex> Blankable.blank?("Hello")
 false
 ```
+
+You can also get behaviour similar to ActiveSupport's `present?` method like so:
+
+```elixir
+def present?(term) do
+  !Blankable.blank?(term)
+end
+```
