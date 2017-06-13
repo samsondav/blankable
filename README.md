@@ -1,19 +1,26 @@
 # Blankable
 
-**TODO: Add description**
+Implementation of `blank?` in Elixir. Aims to work in a practically identical fashion to [ActiveSupport's #blank? method](http://api.rubyonrails.org/files/activesupport/lib/active_support/core_ext/object/blank_rb.html).
 
 ## Installation
 
-If [available in Hex](https://hex.pm/docs/publish), the package can be installed
-by adding `blankable` to your list of dependencies in `mix.exs`:
+Add `blankable` to your list of dependencies in `mix.exs`:
 
 ```elixir
 def deps do
-  [{:blankable, "~> 0.1.0"}]
+  [{:blankable, "~> 0.0.1"}]
 end
 ```
 
-Documentation can be generated with [ExDoc](https://github.com/elixir-lang/ex_doc)
-and published on [HexDocs](https://hexdocs.pm). Once published, the docs can
-be found at [https://hexdocs.pm/blankable](https://hexdocs.pm/blankable).
+## Usage
 
+```
+iex> Blankable.blank?(nil)
+true
+iex> Blankable.blank?("")
+true
+iex> Blankable.blank?([])
+true
+iex> Blankable.blank?("Hello")
+false
+```

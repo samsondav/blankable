@@ -1,10 +1,22 @@
 defprotocol Blankable do
   @fallback_to_any true
-
-  @doc """
-  Elixir implementation of blank?, with similar behaviour to ActiveSupport's
+  @moduledoc """
+  Elixir implementation of `blank?`, with similar behaviour to ActiveSupport's
   implementation
+
+  ## Examples
+
+      iex> Blankable.blank?(nil)
+      true
+      iex> Blankable.blank?("")
+      true
+      iex> Blankable.blank?([])
+      true
+      iex> Blankable.blank?("Hello")
+      false
+
   """
+
   def blank?(term)
 end
 
