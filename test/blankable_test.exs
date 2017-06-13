@@ -1,6 +1,5 @@
 defmodule BlankableTest do
   use ExUnit.Case
-  doctest Blankable
 
   describe "blank?" do
     test "is true for empty list" do
