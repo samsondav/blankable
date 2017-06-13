@@ -3,11 +3,12 @@ defmodule Blankable.Mixfile do
 
   def project do
     [app: :blankable,
-     version: "0.1.0",
-     elixir: "~> 1.4",
+     version: "0.0.1",
+     elixir: "~> 1.3",
      build_embedded: Mix.env == :prod,
      start_permanent: Mix.env == :prod,
-     deps: deps()]
+     deps: deps(),
+     package: package]
   end
 
   # Configuration for the OTP application
@@ -29,5 +30,14 @@ defmodule Blankable.Mixfile do
   # Type "mix help deps" for more examples and options
   defp deps do
     []
+  end
+
+  defp package do
+    [
+      files: ["lib", "mix.exs", "README.md", "LICENSE"],
+      maintainers: ["Sam Davies"],
+      licenses: ["MIT"],
+      links: %{"GitHub" => "https://github.com/sampdavies/blankable"}
+    ]
   end
 end
