@@ -8,7 +8,7 @@ Add `blankable` to your list of dependencies in `mix.exs`:
 
 ```elixir
 def deps do
-  [{:blankable, "~> 0.0.1"}]
+  [{:blankable, "~> 1.0.0"}]
 end
 ```
 
