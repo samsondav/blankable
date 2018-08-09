@@ -3,7 +3,7 @@ defmodule Blankable.Mixfile do
 
   def project do
     [app: :blankable,
-     version: "0.0.1",
+     version: "1.0.0",
      elixir: "~> 1.3",
      build_embedded: Mix.env == :prod,
      start_permanent: Mix.env == :prod,
@@ -37,7 +37,7 @@ defmodule Blankable.Mixfile do
       files: ["lib", "mix.exs", "README.md", "LICENSE"],
       maintainers: ["Sam Davies"],
       licenses: ["MIT"],
-      links: %{"GitHub" => "https://github.com/sampdavies/blankable"},
+      links: %{"GitHub" => "https://github.com/samphilipd/blankable"},
       description: "Implementation of `blank?` in Elixir. Aims to work in a practically identical fashion to ActiveSupport's #blank? method."
     ]
   end
